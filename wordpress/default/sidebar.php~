@@ -1,0 +1,105 @@
+	<div id="sidebar">
+		<ul>
+<li style="font-size: 10pt;">
+<p style="padding-bottom: 5px;"><a href="http://www.limerickblogger.org/blog/limerick-links-and-info">About Limerick</a></p>
+<p><a href="http://planet.limerickblogger.org">Planet Limerick</a></p>
+</li>
+<font color="red"><div id="twitter_div">
+<h2 class="twitter-title">Latest SMS alert</h2>
+<ul id="twitter_update_list"></ul></div>
+<script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script>
+<script type="text/javascript" src="http://twitter.com/statuses/user_timeline/limerickblogger.json?callback=twitterCallback2&count=1"></script>
+</font></br><br>
+
+<li>Mail us! News, tips, anything: limerickblogger<script>document.write("@gmail.com");</script></li>
+
+<li>
+				<?php include (TEMPLATEPATH . '/searchform.php'); ?>
+			</li>
+
+<p align="center"><img src="http://i122.photobucket.com/albums/o259/limerickblogger/limerickblogger-2/LOLadvert.jpg" width="195"</img></p>
+
+<p align="center"><a href="http://www.trinityrooms.ie/" target="_blank"><img src="http://i122.photobucket.com/albums/o259/limerickblogger/limerickblogger-2/trinityroomsad.jpg" border="0" alt="Click here to buy Jesse Malin's new CD online"></a><br>
+<p align="center"><img src="http://i122.photobucket.com/albums/o259/limerickblogger/limerickblogger-2/irishblogawardwinner.jpg" </img>
+<img src="http://www.limerickblogger.org/blog/wp-content/uploads/2007/12/Finalist%20Logo%20Low%20Res.JPG" width="190" </img></p>
+
+			<li>
+			<?php /* If this is a 404 page */ if (is_404()) { ?>
+			<?php /* If this is a category archive */ } elseif (is_category()) { ?>
+			<p>You are currently browsing the archives for the <?php single_cat_title(''); ?> category.</p>
+
+			<?php /* If this is a yearly archive */ } elseif (is_day()) { ?>
+			<p>You are currently browsing the <a href="<?php bloginfo('home'); ?>/"><?php echo bloginfo('name'); ?></a> weblog archives
+			for the day <?php the_time('l, F jS, Y'); ?>.</p>
+
+			<?php /* If this is a monthly archive */ } elseif (is_month()) { ?>
+			<p>You are currently browsing the <a href="<?php bloginfo('home'); ?>/"><?php echo bloginfo('name'); ?></a> weblog archives
+			for <?php the_time('F, Y'); ?>.</p>
+
+      <?php /* If this is a yearly archive */ } elseif (is_year()) { ?>
+			<p>You are currently browsing the <a href="<?php bloginfo('home'); ?>/"><?php echo bloginfo('name'); ?></a> weblog archives
+			for the year <?php the_time('Y'); ?>.</p>
+
+		 <?php /* If this is a monthly archive */ } elseif (is_search()) { ?>
+			<p>You have searched the <a href="<?php echo bloginfo('home'); ?>/"><?php echo bloginfo('name'); ?></a> weblog archives
+			for <strong>'<?php echo wp_specialchars($s); ?>'</strong>. If you are unable to find anything in these search results, you can try one of these links.</p>
+
+			<?php /* If this is a monthly archive */ } elseif (isset($_GET['paged']) && !empty($_GET['paged'])) { ?>
+			<p>You are currently browsing the <a href="<?php echo bloginfo('home'); ?>/"><?php echo bloginfo('name'); ?></a> weblog archives.</p>
+
+			<?php } ?>
+			</li>
+
+			<?php wp_list_pages('title_li=<h2>Pages</h2>' ); ?>
+
+			<li><h2>Archives</h2>
+				<ul>
+				<?php wp_get_archives('type=monthly'); ?>
+				</ul>
+			</li>
+
+			<li><h2>Categories</h2>
+				<ul>
+				<?php wp_list_cats('sort_column=name&optioncount=1&hierarchical=0'); ?>
+				</ul>
+			</li>
+
+			<?php /* If this is the frontpage */ if ( is_home() || is_page() ) { ?>
+				<?php get_links_list(); ?>
+
+				<li><h2>Meta</h2>
+				<ul>
+					<?php wp_register(); ?>
+					<li><?php wp_loginout(); ?></li>
+					<li><a href="http://validator.w3.org/check/referer" title="This page validates as XHTML 1.0 Transitional">Valid <abbr title="eXtensible HyperText Markup Language">XHTML</abbr></a></li>
+					<li><a href="http://gmpg.org/xfn/"><abbr title="XHTML Friends Network">XFN</abbr></a></li>
+					<li><a href="http://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress</a></li>
+					<?php wp_meta(); ?>
+				</ul>
+				</li>
+			<?php } ?>
+</ul>
+<br>
+<!-- Irish Bloggers -->
+<a href="http://www.irishblogs.info/index.php?do=votes&amp;id=152"><img border="0" src="http://www.irishblogs.info/tracker.php?do=in&amp;id=152" alt="Irish Bloggers" /></a>
+<!-- /Irish Bloggers -->
+
+<!-- Feed Counter -->
+
+<a href="http://feeds.feedburner.com/TheLimerickBlogger"><img src="http://feeds.feedburner.com/~fc/TheLimerickBlogger?bg=FF9933&amp;fg=FFFFFF&amp;anim=0" height="26" width="88" style="border:0" alt="" /></a>
+<!--/Feed Counter -->
+
+<a href="http://www.irishblogs.ie" title="Irish Blogs"><img src="http://img.irishblogs.ie/images/irishblogs2.gif" width="80" height="15" border="0" alt="Irish Blogs"></a>
+
+<script type="text/javascript" src="http://embed.technorati.com/embed/pqym2hfh.js"></script>
+
+<a href="http://www.blogtopsites.com/local/"><img style="border:none" src="http://www.blogtopsites.com/track_47223.gif" alt="Local Blogs - Blog Top Sites" /></a>
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nd/3.0/">
+<img alt="Creative Commons License" style="border-width:0" src="http://creativecommons.org/images/public/somerights20.png" />
+</a>
+<br />This 
+<span xmlns:dc="http://purl.org/dc/elements/1.1/" href="http://purl.org/dc/dcmitype/InteractiveResource" rel="dc:type">work</span> is licensed under a 
+<a rel="license" href="http://creativecommons.org/licenses/by-nd/3.0/">Creative Commons Attribution-No Derivative Works 3.0 License</a>.
+	</div>
+

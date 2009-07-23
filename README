@@ -1,0 +1,15 @@
+Installing City Blogger
+
+Installing City Blogger couldn't be simpler :)
+
+Install a fresh wordpress installation into the /blog folder of the web root. Then copy the following files to the wordpress installation to get the city-blogger features
+	
+		1 - The custom wp-config.php to /blog
+		2 - The Local News plugin (local-news.php) to /blog/wp-content/plugins
+		3 - The City Blogger theme to /blog/wp-content/themes/
+		
+Edit the conf-sample.php file to your needs and save it as conf.php and that's wordpress ready to go!
+
+To install the forum part of City Blogger simply copy the forum directory to your web root and navigate to it in your browser. You'll be prompted to enter an installation process. Follow the process by entering all the necessary details for your installation and you're done!.
+
+Move the index.php file to the web root and you're off :)
